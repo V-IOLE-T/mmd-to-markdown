@@ -1,8 +1,8 @@
 # MMD to Markdown
 
-**语言 / Language:** [简体中文](README.zh-CN.md) · [English](README.en.md)
+**语言 / Language:** [简体中文](README.zh-CN.md) · [English](README.md)
 
-这是一个本地优先的 Mathpix Markdown（MMD）工作台。它可以在浏览器中编辑和预览 MMD/Markdown，使用规则转换 MMD，并提供 Chrome 网页浮层与 Python 命令行工具。工作台本身无需启动本地服务。
+这个项目主要解决两个问题：把常见 AI 工具输出的富文本整理为更规范、可移植的 Markdown；在网页里通过可拖动的 Chrome 悬浮框，快速预览和整理不规范的 Markdown。项目也提供完整的本地编辑工作台和 Python 转换工具，工作台直接打开本地 HTML 即可使用，无需启动服务。
 
 ## 功能
 
