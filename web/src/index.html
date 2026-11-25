@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>MMD 工作台</title>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">M<span>→</span></div>
+          <div>
+            <div class="brand-name">MMD 工作台</div>
+            <div class="document-name" id="document-name">未命名文档</div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <span class="save-state" id="save-state" aria-live="polite">
+            <span class="state-dot"></span><span id="save-label">未保存</span>
+          </span>
+          <button class="button button-quiet" id="open-file" type="button">打开文件</button>
+          <button class="button button-primary" id="save-file" type="button">另存为</button>
+          <input id="file-input" type="file" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden />
+        </div>
+      </header>
+
+      <section class="workbar" aria-label="编辑操作">
+        <div class="format-switch" role="tablist" aria-label="编辑格式">
+          <button class="format-tab" id="mode-mmd" role="tab" aria-selected="true" type="button">MMD</button>
+          <button class="format-tab" id="mode-markdown" role="tab" aria-selected="false" type="button">Markdown</button>
+        </div>
+        <div class="workbar-divider" aria-hidden="true"></div>
+        <button class="button button-convert" id="convert" type="button">
+          转换为 Markdown <span aria-hidden="true">→</span>
+        </button>
+        <button class="button button-wrap" id="toggle-wrap" type="button" aria-label="自动换行" aria-pressed="false" title="切换源码自动换行">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 6h16M4 10h11a4 4 0 0 1 0 8h-2m0 0 3-3m-3 3 3 3M4 14v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          自动换行
+        </button>
+        <div class="workbar-spacer"></div>
+        <button class="button button-quiet" id="find" type="button" title="查找或替换">查找</button>
+        <span class="shortcut-hint">⌘ F</span>
+      </section>
+
+      <section class="workspace" aria-label="编辑和预览">
+        <div class="pane editor-pane">
+          <div class="pane-heading">
+            <div class="pane-title"><span class="pane-indicator"></span><span id="editor-heading">MMD 源码</span></div>
+            <div class="pane-meta" id="editor-meta">UTF-8 · Markdown</div>
+          </div>
+          <div class="editor-host" id="editor" aria-label="Markdown 源码编辑器"></div>
+          <div class="pane-footer"><span id="cursor-position">第 1 行，列 1</span><span id="character-count">0 字符</span></div>
+        </div>
+
+        <div class="pane preview-pane">
+          <div class="pane-heading">
+            <div class="pane-title"><span class="preview-icon" aria-hidden="true">◫</span>实时预览</div>
+            <div class="pane-meta" id="preview-format">MMD 内容</div>
+          </div>
+          <article class="preview-content" id="preview"></article>
+          <div class="pane-footer"><span>本地预览</span><span>自动更新</span></div>
+        </div>
+      </section>
+
+      <footer class="statusbar">
+        <span><span class="status-led"></span>离线可用</span>
+        <span id="status-message">打开文件或粘贴内容以开始</span>
+        <span>Mathpix Markdown</span>
+      </footer>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

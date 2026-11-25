@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "MMD 工作台浮层",
+  "version": "1.0.8",
+  "description": "在当前网页中快速编辑、预览并导出 MMD / Markdown。",
+  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "打开 MMD 工作台"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.css", "fonts/*"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}

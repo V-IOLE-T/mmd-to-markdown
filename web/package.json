@@ -1,0 +1,23 @@
+{
+  "name": "mmd-local-editor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node ./build.mjs"
+  },
+  "dependencies": {
+    "@codemirror/lang-markdown": "^6.3.2",
+    "@codemirror/search": "^6.5.10",
+    "@codemirror/state": "^6.7.6",
+    "codemirror": "^6.0.1",
+    "esbuild": "^0.25.5",
+    "highlight.js": "^11.11.1",
+    "html-to-image": "^1.11.13",
+    "katex": "^0.19.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "markdown-it-texmath": "^1.0.0"
+  }
+}
